@@ -39,7 +39,7 @@ from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(x_train,y_train)
 
-#predicting the test set result
+#predicting the test set resultdfsfsfdsfasdfsda
 y_pred = regressor.predict(x_test)
 
 #building the optimal model using backward elimination
