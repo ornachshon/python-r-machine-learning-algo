@@ -1,1 +1,1 @@
-# python & r machine learning basic
+# python & r machine learning basic training
