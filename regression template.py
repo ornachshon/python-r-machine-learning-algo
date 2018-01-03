@@ -30,41 +30,22 @@ y_train = sc_y.fit_transform(y_train)'''
 
 
 # fitting linear regression to the dataset
+#create your reressor here
 
 
-# fitting polynomial regression to the dataset
-from sklearn.preprocessing import PolynomialFeatures
-poly_reg = PolynomialFeatures(degree = 2)
-x_poly = poly_reg.fit_transform(x)
-lin_reg_2 = LinearRegression()
-lin_reg_2.fit(x_poly,y)
 
+#predicting a new result with polynomial regression
+y_pred = regressor.predict(6.5)
 
-# visualising the linear regression results
+# visualising the polynomial regression results (for higher resolution and smoother curve)
+x_grid = np.arange(min(x), 0.1)
+x_grid = x_grid.reshape((len(x_grid), 1))
 plt.scatter(x,y, color = 'red')
-plt.plot(x,lin_reg.predict(x), color = 'blue')
-plt.title('truth or bluff (linear regression)')
-plt.xlabel('position level')
-plt.ylabel('salary')
-plt.show()
-
-# visualising the polynomial regression results
-plt.scatter(x,y, color = 'red')
-plt.plot(x,lin_reg_2.predict(poly_reg.fit_transform(x)),color = 'blue')
+plt.plot(x_grid ,regressor.predict(x_grid), color = 'blue')
 plt.title('truth or bluff (polynomial regressin)')
 plt.xlabel('position level')
 plt.ylabel('salary')
 plt.show()
-
-# predicting a new result with linear regression
-lin_reg.predict(6.5)
-
-
-#predicting a new result with polynomial regression
-lin_reg_2.predict(poly_reg.fit_transform(6.5))
-
-
-
 
 
 
