@@ -11,7 +11,7 @@ import pandas as pd
 dataset = pd.read_csv('Position_Salaries.csv')
 x = dataset.iloc[:, 1:2].values
 y = dataset.iloc[:, 2].values
-
+y = np.reshape(y, (-1,1))
 
 
 
@@ -33,7 +33,7 @@ from sklearn.svm import SVR
 regressor = SVR(kernel = 'rbf')
 regressor.fit(x, y)
 
-#create your reressor here
+
 
 
 
