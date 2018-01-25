@@ -38,7 +38,7 @@ regressor.fit(x, y)
 
 
 #predicting a new result with polynomial regression
-y_pred = regressor.predict(6.5)
+y_pred = sc_y.inverse_transform(regressor.predict(sc_x.transform(np.array([[6.5]]))))
 
 # visualising the SVR results 
 plt.scatter(x,y, color = 'red')
